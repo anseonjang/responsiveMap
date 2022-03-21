@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이름 - responsiveMap </title>
+    <script src="https://kit.fontawesome.com/2d323a629b.js" crossorigin="anonymous"></script>
+    <script src="./script/script.js" defer></script>  <!-- defer 추가 -->
+    
+    <!-- defer 키워드 : 모든 파일을 다 받을 때까지 HTML이 브라우저 상에 표시가 안되니, 이를 방지하기 위해 사용 -->
+    
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@500&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>  
+<!-- 로고/메뉴/sns  -->
+    <!-- header>nav.navbar -->
+    <header>
+        <nav class="navbar">
+            <!-- logo -->
+            <!-- .navbar-logo>i.fab.fa-accusoft+a{QRPRIME} -->
+            <div class="navbar-logo"><i class="fab fa-accusoft"></i><a href="#"> QRPRIME</a></div>
+            <!-- menu - pc -->
+            <!-- ul.navbar-menu>li*5>a{ABOUT} -->
+            <ul class="navbar-menu">
+                <li><a href="#">WORK</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">LIVE</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+            <!-- sns -->
+            <!-- ul.navbar-icons>li*2>i.fab.fa-twitter -->
+            <ul class="navbar-icons">
+                <li><i class="fab fa-twitter"></i></li>
+                <li><i class="fab fa-facebook"></i></li>
+            </ul>
+            <!-- menu - mobile -->
+            <!-- a.navbar-toggleBtn>i.fas.fa-bars -->
+            <a href="#" class="navbar-toggleBtn"><i class="fas fa-bars"></i></a>
+        </nav>
+    </header>
+
+ <!-- 컨텐츠 - 지도  -->
+ <div id="contents">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d203172.98788387695!2d126.83393488293656!3d37.281434433688645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b431e8d19c277%3A0xceb17aba7af9e33d!2z7J207KCg7Lu07ZOo7YSw7JWE7Yq47ZWZ7JuQ!5e0!3m2!1sko!2skr!4v1646893042300!5m2!1sko!2skr"></iframe>
+ </div>
+
+</body>
+</html>

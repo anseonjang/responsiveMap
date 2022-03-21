@@ -1,0 +1,86 @@
+@charset "UTF-8";
+
+/* reset */
+:root {
+    --text-color:#f0f4f5; 
+    /* 최상위 엘리먼트, 변수를 할당하여 사용 가능, :root는 가상선택자*/ 
+}
+
+* {margin: 0; padding: 0; font-family: 'Baloo Tammudu 2', cursive;}
+ul,li {margin: 0; padding: 0; list-style:none;}
+a{color: var(--text-color); text-decoration: none;} 
+
+/* ========================================= 
+    pc 구조 
+============================================*/
+.navbar {background: #263343;  display: flex; 
+    justify-content: space-between; 
+    align-items: center; padding: 8px 12px;}
+/* logo */
+.navbar .navbar-logo {font-size: 24px; color: #fff; margin-top: 9px;}
+.navbar .navbar-logo i {color: #d49466;}
+
+/* menu - pc */
+ul.navbar-menu {display: flex;}
+ul.navbar-menu li{padding: 12px 20px 4px 20px;}
+ul.navbar-menu li:hover{background: #d49466; border-radius: 4px;}
+/* sns */
+ul.navbar-icons {display: flex; color: #fff;}
+ul.navbar-icons i{padding: 8px 12px; cursor:pointer;}
+
+.navbar .navbar-icons .fa-twitter:hover { /* 추가 */ 
+    color: #d49466; 
+}
+.navbar .navbar-icons .fa-facebook:hover { /* 추가 */ 
+    color: #d49466; 
+}
+
+/* menu - mobile (toggle btn) */
+.navbar-toggleBtn {display: none;}
+
+/* map */
+#contents iframe {width: 100%; height: 800px; border:0;}
+
+
+/* ========================================= 
+    mobile 구조 : 최대 사이즈 768px
+============================================*/
+
+@media (max-width:768px){
+    .navbar {
+        flex-direction: column; /* 위아래로 배치되는 block 구조 */
+    }
+
+    ul.navbar-menu {  /* 맨 앞의 클래스 .navbar  빼기 수정 */ 
+        flex-direction: column;
+        align-items:center;
+        width: 100%;
+        display: none;
+    }
+
+    ul.navbar-menu li {  /* 맨 앞의 클래스 .navbar  빼기 수정 */ 
+        width: 100%;
+        text-align: center;
+    }
+    
+    .navbar .navbar-icons {
+        width: 100%;	
+        justify-content: center; 
+        display: none;
+    }
+   
+    /* menu - mobile (toggle btn) */
+    .navbar-toggleBtn {
+    display: block;  position: absolute; right: 32px; top: 18px;
+    font-size: 24px; color: #d49466;  
+    }
+ 
+    .navbar-menu.active,
+.navbar-icons.active {
+    display: flex;
+}
+
+    /* map */
+#contents iframe {height: 450px;}
+
+}
